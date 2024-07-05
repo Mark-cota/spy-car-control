@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spy Car Control</title>
+  <style>
+    body { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Spy Car Control</h1>
+  <button onclick="sendCommand('F')">Forward</button>
+  <button onclick="sendCommand('B')">Backward</button>
+  <button onclick="sendCommand('L')">Left</button>
+  <button onclick="sendCommand('R')">Right</button>
+  <button onclick="sendCommand('S')">Stop</button>
+  <script>
+    function sendCommand(cmd) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "/" + cmd, true);
+      xhr.send();
+    }
+  </script>
+</body>
+</html>
